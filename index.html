@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear, Little Garden 🌷</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         GARDEN NAVIGATION BAR
+    ================================== -->
+
+<div class="toolbar-container">
+
+    <nav class="garden-toolbar">
+
+        <button id="musicToggle" class="music-toggle">
+            🎵 Music
+        </button>
+
+        <button id="themeToggle" class="theme-toggle">
+            🌙 Night
+        </button>
+
+        <button id="sunsetToggle" class="sunset-toggle">
+            🌅 Sunset
+        </button>
+
+        <button id="rainToggle" class="rain-toggle">
+            🌧️ Rain
+        </button>
+
+    </nav>
+
+    <a href="admin.html" class="admin-circle" 
+       aria-label="Admin Login" title="Admin Login">
+        🔐
+    </a>
+
+</div>
+
+    <!-- =================================
+         BACKGROUND MUSIC
+    ================================== -->
+
+    <audio id="backgroundMusic" loop>
+        <source src="assests/music/garden-music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =================================
+         WELCOME SCREEN
+    ================================== -->
+
+<!-- STORYBOOK WELCOME SCREEN -->
+<main class="welcome-screen" id="welcomeScreen">
+
+    <div class="story-page">
+
+        <!-- CHAPTER 1: OPENING -->
+        <section class="story-section opening-section">
+            <p class="story-label">A LITTLE STORY FOR YOU</p>
+
+            <h1>
+                Somewhere between<br>
+                a moment and forever...
+            </h1>
+
+            <p class="story-description">
+                There was a little story waiting to be told.
+            </p>
+
+            <span class="scroll-indicator">↓</span>
+        </section>
+
+
+        <!-- CHAPTER 2: THE BEGINNING -->
+        <section class="story-section">
+            <p class="story-number">01 — THE BEGINNING</p>
+
+            <h2>
+                "Stay," she whispered.
+            </h2>
+
+            <p class="story-description">
+                As if the world could pause for just a little longer.
+            </p>
+        </section>
+
+
+        <!-- CHAPTER 3: THE QUESTION -->
+        <section class="story-section">
+            <p class="story-number">02 — THE QUESTION</p>
+
+            <h2>
+                "For how long?" he asked.
+            </h2>
+
+            <p class="story-description">
+                Though perhaps he already knew the answer.
+            </p>
+        </section>
+
+
+        <!-- CHAPTER 4: THE ANSWER -->
+        <section class="story-section">
+            <p class="story-number">03 — THE ANSWER</p>
+
+            <h2>
+                "Would forever be too much to ask?"
+            </h2>
+
+            <p class="story-description">
+                She asked, hoping that some moments were meant
+                to last beyond the passing of time.
+            </p>
+        </section>
+
+
+        <!-- CHAPTER 5: THE LAST LINE -->
+        <section class="story-section ending-section">
+            <p class="story-number">04 — THE LAST LINE</p>
+
+            <h2>
+                "Seems too short."
+            </h2>
+
+            <p class="story-description">
+                And perhaps, some things are simply too precious
+                for time to measure.
+            </p>
+        </section>
+
+
+        <!-- FINAL SECTION: ENTER THE GARDEN -->
+        <section class="story-section invitation-section">
+
+            <p class="story-label">AND NOW...</p>
+
+            <h2>
+                A little place<br>
+                just for you.
+            </h2>
+
+            <p class="story-description">
+                A garden filled with little surprises,
+                gentle moments, and things worth remembering.
+            </p>
+
+            <button id="enterButton">
+                ENTER THE GARDEN <span>→</span>
+            </button>
+
+
+           
+            <p class="story-signature">
+                Made with a little thought and care. 🌷
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+    <!-- =================================
+         GARDEN SCREEN
+    ================================== -->
+
+    <section class="garden-screen" id="gardenScreen">
+
+        <!-- FALLING PETALS -->
+        <div class="petal-container" id="petalContainer"></div>
+
+        <!-- RAIN EFFECT -->
+        <div class="rain-container" id="rainContainer"></div>
+
+        <!-- TWINKLING NIGHT STARS -->
+        <div class="star-container" id="starContainer"></div>
+
+        <!-- SUN / MOON -->
+        <div class="sun"></div>
+
+
+        <!-- FLOATING BUTTERFLIES -->
+
+        <div class="butterfly butterfly-one">🦋</div>
+        <div class="butterfly butterfly-two">🦋</div>
+        <div class="butterfly butterfly-three">🦋</div>
+
+
+        <!-- FLYING BIRDS -->
+
+        <div class="flying-bird flying-bird-one">🐦</div>
+        <div class="flying-bird flying-bird-two">🕊️</div>
+
+
+        <!-- GARDEN HEADING -->
+
+        <div class="garden-heading">
+
+            <p>A LITTLE WORLD OF ITS OWN</p>
+
+            <h2>Welcome to the Meadow</h2>
+
+            <span>Take your time. There's no rush here.</span>
+
+        </div>
+
+
+        <!-- HILLS -->
+
+        <div class="hills">
+
+            <div class="hill hill-back"></div>
+            <div class="hill hill-front"></div>
+
+        </div>
+
+
+        <!-- =================================
+             GARDEN GROUND
+        ================================== -->
+
+        <div class="garden-ground">
+
+            <!-- TREES -->
+
+            <div class="tree tree-one">🌳</div>
+            <div class="tree tree-two">🌲</div>
+
+
+            <!-- BIRDS -->
+
+            <div class="bird bird-one">🐦</div>
+            <div class="bird bird-two">🕊️</div>
+
+
+            <!-- FLOWERS -->
+
+            <button class="flower flower-one"
+                data-message="Even the smallest flowers can make an ordinary day feel special. 🌼"
+                aria-label="Discover flower one">
+                🌼
+            </button>
+
+            <button class="flower flower-two"
+                data-message="Some of the loveliest things in life are the little moments we often overlook. 🌷"
+                aria-label="Discover flower two">
+                🌷
+            </button>
+
+            <button class="flower flower-three"
+                data-message="Keep learning, keep growing, and never forget how far you've come. 🌻"
+                aria-label="Discover flower three">
+                🌻
+            </button>
+
+            <button class="flower flower-four"
+                data-message="A little kindness can make someone's entire day brighter. 🌸"
+                aria-label="Discover flower four">
+                🌸
+            </button>
+
+            <button class="flower flower-five"
+                data-message="Thank you for being someone who makes ordinary moments memorable. 🌺"
+                aria-label="Discover flower five">
+                🌺
+            </button>
+
+
+            <!-- GARDEN CAT -->
+
+            <button class="garden-cat" id="gardenCat"
+                aria-label="Pet the garden cat">
+
+                <span id="catEmoji">🐈</span>
+
+            </button>
+
+            <div class="cat-message" id="catMessage">
+
+                <p id="catMessageText">
+                    Meow! Hello there! 🐾
+                </p>
+
+            </div>
+
+
+            <!-- HIDDEN SWEETS -->
+
+            <button class="sweet sweet-one"
+                data-message="A little sweetness for someone who makes ordinary moments special. 🍬">
+                🍬
+            </button>
+
+            <button class="sweet sweet-two"
+                data-message="Life is made a little sweeter by the people we meet. 🍰">
+                🍰
+            </button>
+
+            <button class="sweet sweet-three"
+                data-message="Here's a tiny treat to brighten your day! 🧁">
+                🧁
+            </button>
+
+            <button class="sweet sweet-four"
+                data-message="Never underestimate the happiness of a little chocolate. 🍫">
+                🍫
+            </button>
+
+
+            <!-- =================================
+     THE LITTLE MEMORY JAR
+================================== -->
+
+<button id="memoryJar" class="memory-jar"
+    aria-label="Open the little memory jar">
+
+    🫙
+
+    <span class="jar-label">Little Memories</span>
+
+</button>
+
+<!-- PIA'S LITTLE LETTER JAR -->
+<button id="letterJar" class="letter-jar"
+    aria-label="Open the little letter jar">
+
+    💌
+    <span class="letter-jar-label">Leave a Letter</span>
+
+</button>
+
+
+<!-- LETTER JAR POPUP -->
+<div class="letter-jar-overlay" id="letterJarOverlay">
+
+    <div class="letter-jar-card">
+
+        <button id="closeLetterJar" class="letter-jar-close">
+            ×
+        </button>
+
+        <span class="letter-jar-icon">💌</span>
+
+        <p class="letter-jar-subtitle">
+            A LITTLE SPACE FOR YOUR THOUGHTS
+        </p>
+
+        <h3>A Letter for the Garden</h3>
+
+        <p class="letter-jar-description">
+            Whatever is on your mind, you can leave it here.
+            Every thought has a place in this little garden.
+        </p>
+
+        <textarea
+            id="letterText"
+            placeholder="Write whatever you'd like to say..."
+            maxlength="2000"
+        ></textarea>
+
+        <button id="sendLetter">
+            Leave My Letter 🌷
+        </button>
+
+        <p id="letterStatus" class="letter-status"></p>
+
+    </div>
+
+</div>
+
+
+<!-- MEMORY JAR POPUP -->
+
+<div class="memory-overlay" id="memoryOverlay">
+
+    <div class="memory-card">
+
+        <button id="closeMemory" class="memory-close"
+            aria-label="Close memory jar">
+            ×
+        </button>
+
+        <span class="memory-icon">✨</span>
+
+        <p class="memory-subtitle">A LITTLE SOMETHING TO REMEMBER</p>
+
+        <h3>A Jar Full of Little Thoughts</h3>
+
+        <p id="memoryMessage">
+            Every little moment deserves to be remembered.
+        </p>
+
+        <button id="anotherMemory">
+            Another Little Thought 🌷
+        </button>
+
+    </div>
+
+</div>
+
+            <!-- GARDEN NOTE -->
+
+            <p class="garden-note">
+                Sometimes, the simplest places hold the sweetest things.
+            </p>
+
+
+            <!-- =================================
+                 HIDDEN GARDEN SURPRISE
+            ================================== -->
+
+            <button id="secretBottle" class="secret-bottle"
+                aria-label="Discover a hidden surprise">
+                🧴
+            </button>
+
+            <div class="secret-message" id="secretMessage">
+
+                <div class="secret-card">
+
+                    <button id="closeSecret" class="secret-close"
+                        aria-label="Close surprise">
+                        ×
+                    </button>
+
+                    <span class="secret-icon">✨</span>
+
+                    <p>A LITTLE SECRET DISCOVERY</p>
+
+                    <h3>Something Just for You</h3>
+
+                    <p>
+                        You found a little surprise hidden in this garden!
+                        May you always find little reasons to smile,
+                        even on the most ordinary days.
+                    </p>
+
+                    <span class="secret-flower">🌷</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             FLOWER MESSAGE CARD
+        ================================== -->
+
+        <div class="message-card" id="messageCard">
+
+            <button class="close-message" id="closeMessage"
+                aria-label="Close message">
+                ×
+            </button>
+
+            <p>A LITTLE FLOWER FOR YOU</p>
+
+            <h3 id="flowerMessage">
+                A little message awaits...
+            </h3>
+
+        </div>
+
+
+        <!-- =================================
+             PIA'S LITTLE LETTER
+        ================================== -->
+
+        <div class="letter-entry">
+
+            <button id="openLetter" class="letter-button" type="button">
+                💌 A Little Note for You
+            </button>
+
+        </div>
+
+
+        <!-- LETTER POPUP -->
+
+        <div class="letter-overlay" id="letterOverlay">
+
+            <div class="letter-card">
+
+                <button class="letter-close" id="closeLetter"
+                    type="button" aria-label="Close letter">
+                    ×
+                </button>
+
+                <p class="letter-subtitle">A LITTLE NOTE FOR YOU</p>
+
+                <h2>Dear Pia,</h2>
+
+                <p>
+                    Some friendships become special not because of
+                    grand moments, but because of the little things
+                    that make ordinary days a little brighter.
+                </p>
+
+                <p>
+                    Thank you for the conversations, the laughter,
+                    and all the little memories we've shared.
+                    I hope you never forget how much goodness you
+                    bring into the lives of the people around you.
+                </p>
+
+                <p>
+                    Keep learning, keep growing, and never lose
+                    the little things that make you who you are.
+                </p>
+
+                <p class="letter-ending">
+                    With appreciation,<br>
+                    A friend 🌷
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="js/script.js"></script>
+
+    <script type="module" src="js/letter-jar.js"></script>
+
+</body>
+
+</html>
