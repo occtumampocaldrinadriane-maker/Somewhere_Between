@@ -2576,3 +2576,28 @@ body.dark-mode .star-container {
 
 
 
+
+
+
+
+/* =================================
+   ANIMATED SUNSET
+================================= */
+
+/* Smooth sun movement */
+.sun {
+    transition:
+        transform 3s cubic-bezier(0.45, 0, 0.55, 1),
+        background 2s ease,
+        box-shadow 2s ease;
+}
+
+/* Sun slowly descends behind the hills */
+body.sunset-mode .sun {
+    transform: translateY(150px);
+    
+}
+
+
+
+
